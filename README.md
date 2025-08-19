@@ -1,32 +1,37 @@
-# Sentiment-Analysis-of-Post-Training-Student-Reviews
-Student Reviews Sentiment Analysis and Next-Word Prediction using LSTM
+# Sentiment Analysis of Student Reviews & LSTM Next-Word Prediction
 
-This repository contains two related projects:
+This project covers two parts:
 
-Sentiment Analysis of Student Reviews
+1. **Sentiment Analysis of Post-Training Student Reviews**
+   - Built and compared multiple ML/DL models: Random Forest, XGBoost, Naive Bayes, SVM, LSTM, Transformers.
+   - Improved accuracy and extracted insights from reviews to help improve training quality.
 
-Built and compared traditional machine learning models (Random Forest, XGBoost, Naive Bayes, SVM) and deep learning models (LSTM, Transformers) to classify post-training student reviews into positive, negative, or neutral categories.
+2. **Next-Word Prediction Model (Language Modeling)**
+   - Implemented an LSTM-based next-word predictor on a custom text corpus (~50,000+ tokens) built from a Wikipedia sample dump.
+   - Achieved ~60% accuracy after 10 epochs with tokenization and sequence padding.
 
-Generated insights from student feedback that can be used to improve training quality and learner satisfaction.
+## Setup Instructions
 
-Next-Word Prediction using LSTM
+1. Clone the repo
+   ```bash
+   git clone https://github.com/your-username/student-reviews-sentiment-analysis.git
+   cd student-reviews-sentiment-analysis
+   ```
 
-Implemented an LSTM-based model trained on a sample Wikipedia corpus (about 50,000 tokens) for predictive text generation.
+2. Install requirements
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-Applied tokenization and sequence padding, with the model achieving around 60% accuracy after 10 epochs.
+3. Run Jupyter notebooks from `notebooks/` to reproduce results.
 
-Demonstrates fundamental natural language processing techniques such as embeddings and sequential modeling.
+## Dataset
 
-The repository includes:
+- **Student Reviews**: `data/reviews.csv` (synthetic dataset created for demonstration).
+- **Wikipedia Corpus**: `data/wikipedia_sample.txt` (subset of Wikipedia dump).
 
-data/ — synthetic student review dataset and Wikipedia text sample
+## Models Used
 
-src/ — Python scripts for preprocessing, sentiment classification, and next-word prediction
-
-notebooks/ — Jupyter notebooks for exploratory analysis and training
-
-requirements.txt — list of dependencies for environment setup
-
-README.md — detailed project overview and instructions
-
-This project is intended as a practical demonstration of natural language processing workflows, combining both traditional machine learning and deep learning approaches. It is suitable for learning, experimentation, and showcasing skills in text analytics and language modeling.
+- Traditional ML: Random Forest, XGBoost, Naive Bayes, SVM
+- Deep Learning: LSTM for sentiment classification and next-word prediction
+- Transformers: Pre-trained BERT for sentiment analysis
